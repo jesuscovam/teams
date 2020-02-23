@@ -54,5 +54,5 @@ def print_stats(team1, team2, nombre, value):
 team1, team2 = Team.objects.values_list('name', 'color').values()
 
 color = sns.color_palette([team1['color'], team2['color']])
-nombre = str(team1['name']) + '_' + str(team2['name'])
-print_stats(team1['name'], team2['name'], nombre, 'value')
+name = str(team1['name'].replace(' ', '_')) + '_' + str(team2['name'].replace(' ', '_'))
+print_stats(team1['name'], team2['name'], name, 'release')
