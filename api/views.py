@@ -20,3 +20,6 @@ class TeamListView(generic.ListView):
     context_object_name = 'team_list'
     queryset = Team.objects.all()
     template_name ='teams/teams_list_template.html'
+
+class TeamDetailView(generic.ListView):
+    model = Team
