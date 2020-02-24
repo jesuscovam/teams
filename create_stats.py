@@ -32,12 +32,12 @@ def print_stats(team1, team2, nombre, value):
     ax2 = sns.barplot(x='club', y='defending', data=merged, ax=axes[1], palette=color, alpha=0.9)
     ax2.set(ylabel='Defensa')
     sns.barplot(x='club', y='dribbling', data=merged, ax=axes[2],palette=color, alpha=0.9)
-    plt.savefig('api/static/' + nombre + '_stats.png')
+    plt.savefig('api/static/stats.png')
     
     plt.figure(figsize=(50,19))
     sns.catplot(x='club', y='overall', data=merged, palette=color, linewidth=1.5)
     plt.title('Calidad de jugadores')
-    plt.savefig('api/static/' +nombre + '_overall.png')
+    plt.savefig('api/static/overall.png')
 
     plt.figure(figsize=(6,7))
     y = ''
@@ -49,7 +49,7 @@ def print_stats(team1, team2, nombre, value):
     ax = sns.catplot(x='club', y=y, data=merged, palette=color, linewidth=1.5)
     ax.set(ylabel='Millones (EUR)')
     plt.title('Valor € del equipo')
-    plt.savefig('api/static/' + nombre + '_value.png')
+    plt.savefig('api/static/value.png')
 
 team1, team2 = Team.objects.values_list('name', 'color').values()
 

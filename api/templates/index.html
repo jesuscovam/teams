@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Teams</h1>
+  <p>We have the following record counts:</p>
+  <ul>
+    <li><strong>Teams:</strong> {{ num_teams }}</li>
+    <li><strong>Team1:</strong> {{team1_name}}</li>
+    <li><strong>Team2:</strong> {{team2_name}}</li>
+  </ul>
+  {% load static %}
+<img src="{% static '../static/overall.png' %}" alt="UML diagram" style="width:555px;height:540px;">
+<img src="{% static '../static/stats.png' %}" alt="UML diagram" style="width:555px;height:300px;">
+<img src="{% static '../static/value.png' %}" alt="UML diagram" style="width:555px;height:540px;">
+
+{% endblock %}
